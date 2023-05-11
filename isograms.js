@@ -11,3 +11,4 @@ const isIsogram = (str) => {
     }
     return coincidences<=array.length
 }
+
