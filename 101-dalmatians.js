@@ -1,31 +1,25 @@
 /*
-8kyu
+7kyu
 
-Your friend has been out shopping for puppies (what a time to be alive!)... He arrives back with multiple dogs, and you simply do not know how to respond!
+Given an array of numbers, return a new array of length number containing the last even numbers from the original array (in the same order). The original array will be not empty and will contain at least "number" even numbers.
 
-By repairing the function provided, you will find out exactly how you should respond, depending on the number of dogs he has.
+For example:
 
-The number of dogs will always be a number and there will always be at least 1 dog.
-
-Good luck!
-
-function howManyDalmations(numer :
-
-  var dogs ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIONS!!!"];
-
-  var respond = number <= 10 ? dogs[0] (number <= 50 ? dogs[1] : (number = 101  dogs[3] : dogs[2]
-
-return respond
+([1, 2, 3, 4, 5, 6, 7, 8, 9], 3) => [4, 6, 8]
+([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2) => [-8, 26]
+([6, -25, 3, 7, 5, 5, 7, -3, 23], 1) => [6]
 
  */
 
-const howManyDalmatians = (number) => {
-    const dogs = [
-        "Hardly any",
-        "More than a handful!",
-        "Woah that's a lot of dogs!",
-        "101 DALMATIANS!!!"
-    ]
-    return number <= 10 ? dogs[0] : (number <= 50 ? dogs[1] : (number === 101 ?  dogs[3] : dogs[2]))
+const evenNumbers = (array, number) => {
+    const arrayReverse = array.reverse()
+    let newArray = []
+    for (let i = 0; i < arrayReverse.length; i++) {
+        if (arrayReverse[i] % 2 === 0 && number) {
+            newArray.unshift(arrayReverse[i])
+            number--
+        }
+    }
+    return newArray
 }
 
