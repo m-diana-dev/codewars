@@ -19,4 +19,3 @@ const solution = (string) => {
     }
     return arr.join('')
 }
-
