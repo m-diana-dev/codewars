@@ -11,35 +11,12 @@ For example:
 
  */
 
-function add(a, b) {
-    return a + b;
-}
-
-function divide(a, b) {
-    if (Number.isInteger(a) && Number.isInteger(b)) {
-        return a / b;
-    } else {
-        let intResult = Math.floor(a / b);
-        let floatResult = a / b;
-        return [intResult, floatResult];
-    }
-}
-
-function multiply(a, b) {
-    return a * b;
-}
-
-function mod(a, b) {
-    return a % b;
-}
-
-function exponent(a, b) {
-    return Math.pow(a, b);
-}
-
-function subt(a, b) {
-    return a - b;
-}
+const add = (a, b) => a + b;
+const subt = (a, b) => a - b;
+const divide = (a, b) => a / b;
+const multiply = (a, b) => a * b;
+const mod = (a, b) => a % b;
+const exponent = (a, b) => a ** b;
 
 
 
